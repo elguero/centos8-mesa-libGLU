@@ -12,6 +12,8 @@ Source2:        make-git-snapshot.sh
 
 Patch1: 0001-glu-initialize-PriorityQ-order-field-to-NULL-in-pqNe.patch
 Patch2: 0002-Add-D-N-DEBUG-to-CFLAGS-dependent-on-enable-debug.patch
+# https://gitlab.freedesktop.org/mesa/glu/-/commit/b293e7e843cff28c4b925fb0db988395c040d0ef#2d2a81b810dc90f672da760971fb984868f4529d
+Patch3: 0003-Fix-build-error.patch
 
 BuildRequires:  autoconf automake libtool
 BuildRequires:  mesa-libGL-devel
@@ -35,6 +37,7 @@ developing applications that use %{name}.
 %setup -q -n glu-%{?gitdate:%{gitdate}}%{?!gitdate:%{version}}
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 autoreconf -v -i -f

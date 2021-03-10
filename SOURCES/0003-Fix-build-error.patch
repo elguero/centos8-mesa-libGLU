@@ -1,0 +1,12 @@
+diff --git a/src/libutil/error.c b/src/libutil/error.c
+index 7212748450d5f5c4dd27153c69e9481f54ab0442..d3b26663cf58d444f3d11447900d38ce168bad0d 100644
+--- a/src/libutil/error.c
++++ b/src/libutil/error.c
+@@ -30,6 +30,7 @@
+ 
+ #include "gluos.h"
+ #include "gluint.h"
++#include <stddef.h>
+ #include <GL/glu.h>
+ 
+ 
